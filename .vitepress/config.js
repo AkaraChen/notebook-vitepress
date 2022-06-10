@@ -76,7 +76,7 @@ const defaultSidebar = [
         collapsible: true,
         collapsed: true,
         items: [
-            { text: '技巧', link: 'javascript/closure' },
+            { text: '技巧', link: 'javascript/skill/closure' },
             { text: 'API', link: 'javascript/api/fetch' },
             { text: '异步', link: 'javascript/async' },
             { text: '后端', link: 'javascript/backend/express' },
