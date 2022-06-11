@@ -1,7 +1,5 @@
 # Golang
 
-以后 Golang 大概会跟 JavaScript 同步进行，目前自我感觉良好，所以 Go 入门的笔记会很粗暴。
-
 ## 安装
 
 下载地址：<https://go.dev/dl/>

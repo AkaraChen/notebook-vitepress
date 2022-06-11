@@ -1,41 +1,4 @@
----
-title: JavaScript Fetch API
-date: 2022-05-10 18:41:59
-tags:
-category: 学习笔记
-updated: 2022-05-10 18:41:59
----
-
-fetch 是用于发起获取资源的请求的方法，属于我一直想学，但是一直被遗忘的好东西。在说明这为什么是个好东西之前我希望先拉踩一下 XHR。
-
-## XHR 为什么该死
-
-在过去，XHR 无疑是被大量使用的，以至于 Ajax 这个名词在很多人眼中仿佛跟 XHR 绑定在一起，XHR 之所以使用范围如此广泛，不是因为这个 API 好用，而是他出现的早，仅此而已。使用 XHR 很容易产出这样的代码：
-
-```js
-var xhr = new XMLHttpRequest();
-
-xhr.onreadystatechange = function(){
-  if (xhr.readyState === 4){
-    if (xhr.status === 200){
-      console.log(xhr.responseText);
-    } else {
-      console.error(xhr.statusText);
-    }
-  }
-};
-
-xhr.onerror = function (e) {
-  console.error(xhr.statusText);
-};
-
-xhr.open('GET', '/endpoint', true);
-xhr.send(null);
-```
-
-不用我说也知道，XHR 繁琐而又无趣（这么一大篇代码，我甚至没给这个请求添加什么参数）。因此出现了众多对 XHR 的封装，比如 Jquery 的 `$.ajax()`、axios 等等。除此之外，XHR 还不支持 Node.js（因为 Node.js 上有自带且更好用的 http 库），天下苦 XHR 久矣，所以救兵是谁呢？就是 fetch()。
-
-## Hello, fetch
+# Fetch
 
 目前 [Can I use](https://caniuse.com/fetch) 上显示 95% 的浏览器支持这一特性，因此可以大胆使用。
 
@@ -142,37 +105,3 @@ fetch('/endpoint').then(response => console.log(response.status))
     }
 })()
 ```
-
-## 杂记：Bilibili 嵌入代码优化
-
-```html
-<div style="position: relative; padding: 30% 45%;">
-    <iframe
-        style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"
-        src="//player.bilibili.com/player.html?aid=502193304&bvid=BV1PN411X7QW&cid=311661670&page=1"
-        frameborder="no"
-        scrolling="no"
-      >
-    </iframe>
-</div>
-```
-
-每次用的时候替换一下播放器地址就行了。
-
-## 结尾
-
-明天大概会整理下 Cookie 和 localStorage 相关 API。
-
-最后的最后，祝愿我们的小狼公主每天都能快乐。
-
-今天我想多溜一会《红色高跟鞋》。
-
-<div style="position: relative; padding: 30% 45%;">
-    <iframe
-        style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"
-        src="//player.bilibili.com/player.html?aid=502193304&bvid=BV1PN411X7QW&cid=311661670&page=1"
-        frameborder="no"
-        scrolling="no"
-      >
-    </iframe>
-</div>

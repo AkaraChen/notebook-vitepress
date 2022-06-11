@@ -44,7 +44,6 @@ const defaultSidebar = [
             { text: 'Kotlin', link: 'other/kotlin/basic' },
             { text: '日语', link: 'other/japanese' },
             { text: 'CTF', link: 'other/ctf' },
-            { text: 'Caddy', link: 'other/caddy' },
             { text: 'PostgreSQL', link: 'other/pgsql' },
             { text: 'Java', link: 'other/java/snippets' },
             { text: 'Golang', link: 'other/golang/basic' }
@@ -127,7 +126,8 @@ const JavaScriptSidebar = [
         collapsible: true,
         collapsed: true,
         items: [
-            { text: '基础', link: 'javascript/react/basic' }
+            { text: '基础', link: 'javascript/react/basic' },
+            { text: 'Hooks', link: 'javascript/react/hooks'}
         ]
     },
     {
@@ -135,7 +135,7 @@ const JavaScriptSidebar = [
         collapsible: true,
         collapsed: true,
         items: [
-            { text: '基础', link: 'javascript/skill/oop', }
+            { text: '基础', link: 'javascript/oop', }
         ]
     },
     {
@@ -143,7 +143,7 @@ const JavaScriptSidebar = [
         collapsible: true,
         collapsed: true,
         items: [
-            { text: '基础', link: 'javascript/skill/fp' }
+            { text: '基础', link: 'javascript/fp' }
         ]
     }, {
         text: 'TypeScript',

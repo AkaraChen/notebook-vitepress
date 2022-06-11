@@ -17,5 +17,3 @@ promise
     .then( result => console.log(result) )
     .catch( error => throw error )
 ```
-
-好了，东西会了，写代码的时候照样不会用。

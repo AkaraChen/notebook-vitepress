@@ -1,39 +1,17 @@
 # 选择结构
 
-## Why
-
-昨天写了个很简单的作业，老师考察 switch/ifelse，我写完之后看着满屏的 switch/ifelse 心生厌烦，于是就把 ifelse 改成了二元表达式，但是 switch 又不知道怎么改，于是就去网上搜了搜方案，现在搞个差不多了就记下笔记。
-
 ## 二元表达式替代 if
 
 这种就是二元表达式，相信各位不用我多讲
 
 ```js
 let [a, b] = [1, 2]
-a > b ? alert("a大") : alert("b大")
+a > b 
+    ? alert("a大") 
+    : alert("b大")
 ```
 
-我们也可以选择使用匿名函数，在一边放下多行代码：
-
-```js
-let [a, b] = [1, 2];
-a < b ? (() => {
-    alert("a小")
-})() 
-    : alert("b小");
-```
-
-在匿名函数里再嵌套一个二元表达式，就实现了类似 if 嵌套的东西：
-
-```js
-let [a, b, c] = [1, 2, 3];
-a < b ? (() => {
-    a < c ? alert("c大") : alert("a大");
-})()
-    : alert("a小");
-```
-
-到这里你可能已经看出局限性了，这种写法好像跟 ifelse 并没有太多差别，而且很难看清。
+仅仅适合放一些简单的逻辑，
 
 ## 表驱动替代 switch
 
@@ -84,6 +62,64 @@ const getFlow = (option) => {
 }
 getFlow(1) //1
 getFlow(3) //NaN
+```
+
+## 逻辑与操作符
+
+如果你只是想在满足某个条件时执行一个函数，那么你可以使用逻辑和运算符。
+
+```js
+if (true) {
+  alert(1)
+}
+// 等同于
+true && alert(1)
+```
+
+## Array.prototype.includes()
+
+在上一节中，我们讨论了如何优化一对一的选择结构，这里我们讨论如何优雅地实现一对多的选择结构。
+
+```js
+const getContinent = (option) => {
+  if (option === "China" || option === "Japan") {
+    return "Asia";
+  }
+  if (option === "Germany" || option === "France") {
+    return "Europe";
+  }
+};
+
+console.log(getContinent("China"));
+```
+
+现在看起来并没有那么糟糕，因为我还没有把所有的国家都加进去。这当然是可以优化的，而且可以通过使用Array的includes方法轻松避免。
+
+```js
+const getContinent = (option) => {
+  const Asia = ["China", "Japan"];
+  const Europe = ["Germany", "Franch"];
+  if (Asia.includes(option)) return "Asia";
+  if (Europe.includes(option)) return "Europe";
+  return "Unknown";
+};
+
+console.log(getContinent("China")); // Asia
+```
+
+经过这种优化，即使增加更多的国家，代码也不会变得杂乱无章。但它可以变得更好。
+
+```js
+const getContinent = (option) => {
+  let [result, setResult] = ["unknown", (str) => (result = str)];
+  const Asia = ["China", "Japan"];
+  const Europe = ["Germany", "Franch"];
+  Asia.includes(option) && setResult("Asia");
+  Europe.includes(option) && setResult("Europe");
+  return result;
+};
+
+console.log(getContinent("China"));
 ```
 
 ## 结语
