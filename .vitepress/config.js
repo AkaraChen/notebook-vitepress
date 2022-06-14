@@ -33,7 +33,8 @@ const defaultSidebar = [
         items: [
             { text: '第一行代码', link: 'rust/headfirst' },
             { text: '基础', link: 'rust/basic' },
-            { text: '所有权', link: 'rust/ownership' }
+            { text: '所有权', link: 'rust/ownership' },
+            { text: '结构体', link: 'rust/struct' }
         ]
     }, {
         text: 'MySQL',
