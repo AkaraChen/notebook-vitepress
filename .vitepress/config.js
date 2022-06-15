@@ -12,6 +12,7 @@ const defaultSidebar = [
             { text: '面向对象', link: 'javascript/oop' },
             { text: '函数式', link: 'javascript/fp' },
             { text: 'TypeScript', link: 'javascript/ts' },
+            { text: '工程化', link: 'javascript/project/module' }
         ]
     }, {
         text: 'CSS',
@@ -155,6 +156,13 @@ const JavaScriptSidebar = [
         collapsed: true,
         items: [
             { text: '基础', link: 'javascript/ts' }
+        ]
+    }, {
+        text: '工程化',
+        collapsible: true,
+        collapsed: true,
+        items: [
+            { text: '模块', link: 'javascript/project/module'}
         ]
     }
 ]
