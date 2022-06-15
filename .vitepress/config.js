@@ -34,7 +34,9 @@ const defaultSidebar = [
             { text: '第一行代码', link: 'rust/headfirst' },
             { text: '基础', link: 'rust/basic' },
             { text: '所有权', link: 'rust/ownership' },
-            { text: '结构体', link: 'rust/struct' }
+            { text: '结构体', link: 'rust/struct' },
+            { text: '枚举与模式匹配', link: 'rust/enum' },
+            { text: '模块', link: 'rust/module' }
         ]
     }, {
         text: 'MySQL',

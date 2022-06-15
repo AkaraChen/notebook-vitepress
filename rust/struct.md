@@ -32,16 +32,34 @@ struct Color(i32, i32, i32);
 
 我们可以对结构体添加 `mut`，但是这样会让所有的值都可访问，Rust 不支持定义其中的哪个属性不可修改。
 
-## 伪·构造函数
-
-结构体没有构造函数，但是我们可以整个差不多的来简化结构体实例的创建。
+## 添加方法
 
 ```rust
-fn create_user(name: String, nickname: String, active: bool) -> User {
-    User {
-        name,
-        nickname,
-        active,
+struct Rectangle {
+    width: i32,
+    height: i32
+}
+
+impl Rectangle {
+    fn area(&self) -> i32 {
+        self.width * self.height
     }
 }
 ```
+
+在方法上传入一个  `&self` 就能成为方法，访问 `&self` 就能访问实例，当然也可以添加 `&mut self`，就像函数那样。
+
+## 关联函数
+
+在 OOP 语言里我们一般称其为构造函数：
+
+```rust
+fn from(width: i32, height: i32) -> Rectangle {
+    Rectangle {
+        width,
+        height,
+    }
+}
+```
+
+然后我们就可以用 `Rectangle::from()` 来创建构造函数了。
