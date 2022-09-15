@@ -544,7 +544,7 @@ vite@^2.9.7:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@^1.0.0-alpha.1:
+vitepress@1.0.0-alpha.1:
   version "1.0.0-alpha.1"
   resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.1.tgz#d1ea9dedfcd2f8cb344257b97f949708cf9e1784"
   integrity sha512-yA0QIl+mB3fQ2j+keQVa0DTT0waP2AeWM/p9VYfUAT9vOkQEGass4/oYmMGPCQrBwCaO3cpOxJL3ZFVooyvybQ==
