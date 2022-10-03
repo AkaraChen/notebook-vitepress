@@ -163,10 +163,10 @@
   resolved "https://registry.yarnpkg.com/@types/web-bluetooth/-/web-bluetooth-0.0.15.tgz#d60330046a6ed8a13b4a53df3813c44942ebdf72"
   integrity sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA==
 
-"@vitejs/plugin-vue@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.1.0.tgz#3a423ea6943a450e806da412a911150e928598ed"
-  integrity sha512-fmxtHPjSOEIRg6vHYDaem+97iwCUg/uSIaTzp98lhELt2ISOQuDo2hbkBdXod0g15IhfPMQmAxh4heUks2zvDA==
+"@vitejs/plugin-vue@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-3.1.2.tgz#3cd52114e8871a0b5e7bd7d837469c032e503036"
+  integrity sha512-3zxKNlvA3oNaKDYX0NBclgxTQ1xaFdL7PzwF6zj9tGFziKwmBa3Q/6XcJQxudlT81WxDjEhHmevvIC4Orc1LhQ==
 
 "@vue/compiler-core@3.2.40":
   version "3.2.40"
@@ -210,7 +210,7 @@
     "@vue/compiler-dom" "3.2.40"
     "@vue/shared" "3.2.40"
 
-"@vue/devtools-api@^6.4.1":
+"@vue/devtools-api@^6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.4.2.tgz#faf303a70cd9f8662896d663a195df41a8af1e53"
   integrity sha512-6hNZ23h1M2Llky+SIAmVhL7s6BjLtZBCzjIz9iRSBUsysjE7kC39ulW0dH4o/eZtycmSt4qEr6RDVGTIuWu+ow==
@@ -578,15 +578,15 @@ vite@^3.1.4:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@1.0.0-alpha.18:
-  version "1.0.0-alpha.18"
-  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.18.tgz#e64f115ea23368470d790e50b94279b493754ed7"
-  integrity sha512-6Co3/t+oeF6vxJxG7/uy5/wIr+P/8szeFjn3gu/dpJ1aOGA0gnQ+61P8J52b2VTFSDpFC63adLvUFacdCJXywg==
+vitepress@1.0.0-alpha.19:
+  version "1.0.0-alpha.19"
+  resolved "https://registry.yarnpkg.com/vitepress/-/vitepress-1.0.0-alpha.19.tgz#a73d1fc4f499d2498d5f71009c7ce4470662e4b8"
+  integrity sha512-0FIUZB6JGXio7SELDDUkyQoMjmO/UAXqDXmznzOsBKsdZ3EHlyb6NaP/V/BMfN5S8+GV88ScbIL0jd/pDzkLBg==
   dependencies:
     "@docsearch/css" "^3.2.1"
     "@docsearch/js" "^3.2.1"
-    "@vitejs/plugin-vue" "^3.1.0"
-    "@vue/devtools-api" "^6.4.1"
+    "@vitejs/plugin-vue" "^3.1.2"
+    "@vue/devtools-api" "^6.4.2"
     "@vueuse/core" "^9.3.0"
     body-scroll-lock "4.0.0-beta.0"
     shiki "^0.11.1"
